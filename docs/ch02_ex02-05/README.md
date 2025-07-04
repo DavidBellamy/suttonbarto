@@ -9,6 +9,8 @@ the $q_*(a)$ on each step). Prepare plots like Figure 2.2 for an action-
 -value method using a constant step-size parameter, $\alpha$ = 0.1. Use
 $\epsilon$ = 0.1 and longer runs, say of 10,000 steps.
 
+# Solution
+
 **Code:** [here.](../../suttonbarto/chapter2/nonstationary.py)
 
 ## Average Reward
