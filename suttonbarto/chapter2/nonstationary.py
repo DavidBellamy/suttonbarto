@@ -14,85 +14,42 @@ the q_*(a) on each step). Prepare plots like Figure 2.2 for an action-
 import matplotlib.pyplot as plt
 import numpy as np
 
-class NonstationaryBandit:
-    def __init__(self, k=10, mu=0.0, sigma=1.0, walk_std=0.01):
-        self.k = k
-        self.q_true = np.ones(k) * mu
-        self.sigma = sigma
-        self.walk_std = walk_std
+# --- parameters -----------------------------------------------------------
+k, T, runs = 10, 10_000, 2_000
+eps, alpha, sigma_rwlk = 0.1, 0.1, 0.01
+# --------------------------------------------------------------------------
 
-    def step(self):
-        self.q_true += np.random.normal(0, self.walk_std, self.k)
+def bandit(runs, k, T, eps, alpha, sigma):
+    q_true  = np.zeros((runs, k))
+    q_hat   = np.zeros_like(q_true)
+    avg_r   = np.zeros(T)
+    avg_opt = np.zeros(T)
 
-    def reward(self, action):
-        return np.random.normal(self.q_true[action], self.sigma)
+    for t in range(T):
+        greedy = q_hat.argmax(1)
+        explore = np.random.randint(0, k, runs)
+        acts = np.where(np.random.rand(runs) < eps, explore, greedy)
 
-def run_experiment(k=10, steps=10000, runs=2000, epsilon=0.1, alpha=0.1):
-    avg_rewards_sample = np.zeros(steps)
-    avg_rewards_const = np.zeros(steps)
-    optimal_action_counts_sample = np.zeros(steps)
-    optimal_action_counts_const = np.zeros(steps)
+        r = np.random.randn(runs) + q_true[np.arange(runs), acts]
+        q_hat[np.arange(runs), acts] += alpha * (r - q_hat[np.arange(runs), acts])
+        q_true += np.random.randn(runs, k) * sigma
 
-    for run in range(runs):
-        bandit = NonstationaryBandit(k=k)
-        Q_sample = np.zeros(k)
-        Q_const = np.zeros(k)
-        N = np.zeros(k)
-        optimal_action = np.argmax(bandit.q_true)
+        avg_r[t]   = r.mean()
+        avg_opt[t] = (acts == q_true.argmax(1)).mean()
 
-        for t in range(steps):
-            # Sample-average method
-            if np.random.rand() < epsilon:
-                action_sample = np.random.randint(k)
-            else:
-                action_sample = np.argmax(Q_sample)
-            reward_sample = bandit.reward(action_sample)
-            N[action_sample] += 1
-            Q_sample[action_sample] += (reward_sample - Q_sample[action_sample]) / N[action_sample]
+    return avg_r, avg_opt
 
-            # Constant step-size method
-            if np.random.rand() < epsilon:
-                action_const = np.random.randint(k)
-            else:
-                action_const = np.argmax(Q_const)
-            reward_const = bandit.reward(action_const)
-            Q_const[action_const] += alpha * (reward_const - Q_const[action_const])
+avg_r, avg_opt = bandit(runs, k, T, eps, alpha, sigma_rwlk)
 
-            bandit.step()
-            optimal_action = np.argmax(bandit.q_true)
+plt.plot(avg_r)
+plt.xlabel("Steps")
+plt.ylabel("Average reward")
+plt.savefig("docs/ch02_ex02-05/avg_reward.png")
+plt.clf()
 
-            avg_rewards_sample[t] += reward_sample
-            avg_rewards_const[t] += reward_const
-            if action_sample == optimal_action:
-                optimal_action_counts_sample[t] += 1
-            if action_const == optimal_action:
-                optimal_action_counts_const[t] += 1
-
-    avg_rewards_sample /= runs
-    avg_rewards_const /= runs
-    optimal_action_counts_sample = 100 * optimal_action_counts_sample / runs
-    optimal_action_counts_const = 100 * optimal_action_counts_const / runs
-
-    return avg_rewards_sample, avg_rewards_const, optimal_action_counts_sample, optimal_action_counts_const
-
-if __name__ == "__main__":
-    steps = 10000
-    avg_rewards_sample, avg_rewards_const, opt_sample, opt_const = run_experiment(steps=steps)
-
-    plt.figure(figsize=(12, 5))
-    plt.subplot(1, 2, 1)
-    plt.plot(avg_rewards_sample, label="Sample-average")
-    plt.plot(avg_rewards_const, label="Constant step-size (α=0.1)")
-    plt.xlabel("Steps")
-    plt.ylabel("Average reward")
-    plt.legend()
-
-    plt.subplot(1, 2, 2)
-    plt.plot(opt_sample, label="Sample-average")
-    plt.plot(opt_const, label="Constant step-size (α=0.1)")
-    plt.xlabel("Steps")
-    plt.ylabel("% Optimal action")
-    plt.legend()
-
-    plt.tight_layout()
-    plt.show()
+plt.plot(avg_opt)
+plt.xlabel("Steps")
+plt.ylabel("% optimal")
+plt.ylim(0, 1)
+plt.savefig("docs/ch02_ex02-05/avg_optimal.png")
+plt.clf()
