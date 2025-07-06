@@ -18,4 +18,5 @@ For discussions of specific exercises, see their respective folders:
 | 2       | [2.6](./docs/ch02_ex02-06/README.md) | Mysterious Spikes | &uarr; initial optimism $\implies$ &uarr; initial determinism in greedy policy |
 |2 |[2.7](./docs/ch02_ex02-07/README.md) | Unbiased Constant-Step-Size Trick | Divide $\alpha$ by a function $f: \N \rarr [0, 1) $ which tends to 1 from below. Offsets bias of $Q_1$ by permitting larger-than-$\alpha$ updates at first, converging to $\alpha$-sized updates in the limit. |
 |2|[2.8](./docs/ch02_ex02-08/README.md)|UCB Spikes| &uarr; exploration budget $\implies$ larger initial spike since bandit is 'forced off' the action with highest empirical mean |
-|2|[2.9](./docs/ch02_ex02-09/README.md)|Gradient Bandits| 2-variable softmax $\equiv$ sigmoid/logistic function
+|2|[2.9](./docs/ch02_ex02-09/README.md)|Gradient Bandits| 2-variable softmax $\equiv$ sigmoid/logistic function |
+|2|[2.10]()|Contextual bandits||
