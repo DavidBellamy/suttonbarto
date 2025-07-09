@@ -22,3 +22,4 @@ For discussions of specific exercises, see their respective folders:
 |2|[2.10](./docs/ch02_ex02-10/README.md)|Contextual bandits| With no context, acting randomly is best; with context, associating action-value estimates to states plus exploring  leads to higher average reward |
 |2|[2.11](./docs/ch02_ex02-11/README.md) | Nonstationary bandit parameter study | $\epsilon$-greedy is best here vs. worst on stationary testbed; optimistic greedy is unimpacted by $Q_0$|
 |3| [3.1](./docs/ch03_ex03-01/README.md) | Finite MDP Examples | MDPs are very general! |
+|3|[3.2](./docs/ch03_ex03-02/README.md) | Limits of MDPs | Ill-defined reward signal; very noisy observations of underlying state; very sparse rewards; highly unstable dynamics
