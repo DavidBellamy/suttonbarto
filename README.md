@@ -25,3 +25,4 @@ For discussions of specific exercises, see their respective folders:
 |3|[3.2](./docs/ch03_ex03-02/README.md) | Limits of MDPs | Ill-defined reward signal; very noisy observations of underlying state; very sparse rewards; highly unstable dynamics
 |3|[3.3](./docs/ch03_ex03-03/README.md) | Picking the agent-environment boundary | There is a Pareto front of controllability + complexity |
 |3|[3.4](./docs/ch03_ex03-04/README.md) | Deriving one-step dynamics from state transition probabilities | The dynamics can be read off the state diagram | 
+|3| [3.5](./docs/ch03_ex03-05/README.md) | Episodic Modification for the Transition Distribution | Dynamics function can't condition on terminal states else probabilities are undefined |
