@@ -29,3 +29,4 @@ For discussions of specific exercises, see their respective folders:
 |3|[3.6](./docs/ch03_ex03-06/README.md) | Episodic vs. Continuing Returns of Pole-Balancing | Returns lie on a wider interval for continuing formulations than episodic |
 |3|[3.7](./docs/ch03_ex03-07/README.md) | The issue with sparse rewards | Sparse rewards inhibit exploration; densifying the reward signal can help |
 |3|[3.8](./docs/ch03_ex03-08/README.md) | Computing returns from rewards | Recurrence lets us compute earlier returns from later ones |
+|3|[3.9](./docs/ch03_ex03-09/README.md) | Early Returns with Infinite Horizons | Infinite-horizon returns are easily computable when rewards are constant |
