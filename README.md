@@ -27,3 +27,4 @@ For discussions of specific exercises, see their respective folders:
 |3|[3.4](./docs/ch03_ex03-04/README.md) | Deriving one-step dynamics from state transition probabilities | The dynamics can be read off the state diagram | 
 |3| [3.5](./docs/ch03_ex03-05/README.md) | Episodic Modification for the Transition Distribution | Dynamics function can't condition on terminal states else probabilities are undefined |
 |3|[3.6](./docs/ch03_ex03-06/README.md) | Episodic vs. Continuing Returns of Pole-Balancing | Returns lie on a wider interval for continuing formulations than episodic |
+|3|[3.7](./docs/ch03_ex03-07/README.md) | The issue with sparse rewards | Sparse rewards inhibit exploration; densifying the reward signal can help |
