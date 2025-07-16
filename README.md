@@ -34,3 +34,4 @@ For discussions of specific exercises, see their respective folders:
 |3|[3.11](./docs/ch02_ex03-11/README.md) | Expected Reward in terms of Policy | The product of policy and marginalized dynamics function yields the agent's expected rewards |
 |3|[3.12](./docs/ch03_ex03-12/README.md) | State-value function in terms of action-value function | State-value is the expectation of action-value under the policy's action probabilities in that state |
 |3|[3.13](./docs/ch03_ex03-13/README.md) | Action-value function in terms of state-value function | Action-value is the expected immediate reward plus the discounted expected next-state value |
+|3|[3.14](./docs/ch03_ex03-14/README.md) | Center state-value in Gridworld | When state-values of successor states are known it is easy to derive the state-value of a predecessor state from them |
