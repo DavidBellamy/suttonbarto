@@ -1,4 +1,4 @@
-# Exercise 3.15 - Adding a constant to all rewards
+# Exercise 3.15 - Adding a constant to all rewards in a continuing task
 
 **Problem Statement**
 In the gridworld example, rewards are positive for goals, negative for running into the edge of the world, and zero the rest of the time. Are the signs of these rewards important, or only the intervals between them? Prove, using equation 3.8 (below), that adding a constant $c$ to all the rewards adds a constant, $v_c$, to the values of all states, and thus does not affect the relative values of any states under any policies. What is $v_c$ in terms of $c$ and $\gamma$?
