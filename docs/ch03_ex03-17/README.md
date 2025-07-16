@@ -69,7 +69,7 @@ $$q_\pi(s, a) = \sum\limits_{s', r}\left( rp(s',r|s,a) + \gamma p(s',r|s,a) \sum
 
 And finally factor out the common term $p(s',r|s,a)$
 
-$$q_\pi(s, a) = \sum\limits_{s', r}\left(p(s',r|s,a)[r + \gamma \sum\limits_{a'}q_\pi(s',a')\pi(a'|s')]\right)$$
+$$\therefore \boxed{q_\pi(s, a) = \sum\limits_{s', r}\left(p(s',r|s,a)[r + \gamma \sum\limits_{a'}q_\pi(s',a')\pi(a'|s')]\right) \quad \forall a, s \in \mathcal{A,S}}$$
 
 This is the action-value Bellman equation that relates current action-values to those of their state-action successors. It can also be expressed as an expectation
 
