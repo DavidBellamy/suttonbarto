@@ -39,3 +39,4 @@ For discussions of specific exercises, see their respective folders:
 |3|[3.16](./docs/ch03_ex03-16/README.md) | Adding a constant to all rewards in an episodic task | This shifts state-values randomly depending on episode length. Positive constants incentivize longer episodes. Negative constants incentivize shorter ones. |
 |3|[3.17](./docs/ch03_ex03-17/README.md) | Bellman equation for action-values | Action-values are the expected {immediate reward plus discounted action-value of successor state/actions} | 
 |3|[3.18](./docs/ch03_ex03-18/README.md) | State-value in terms of action-value | State-value is the expected action-value |
+|3|[3.19](./docs/ch03_ex03-19/README.md) | Action-value in terms of state-value | Action-value is the expected immediate reward plus discounted next state value |
