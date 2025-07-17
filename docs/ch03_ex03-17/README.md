@@ -73,6 +73,6 @@ $$\therefore \boxed{q_\pi(s, a) = \sum\limits_{s', r}\left(p(s',r|s,a)[r + \gamm
 
 This is the action-value Bellman equation that relates current action-values to those of their state-action successors. It can also be expressed as an expectation
 
-$$q_\pi(s, a) = \mathbb{E}_{p, \pi}[r + \gamma q_\pi(S_{t+1}, A_{t+1})|S_t=s, A_t=a]$$
+$$q_\pi(s, a) = \mathbb{E}_{p, \pi}[R_{t+1} + \gamma q_\pi(S_{t+1}, A_{t+1})|S_t=s, A_t=a]$$
 
 In words, the action-value of a given state-action pair is the expected immediate reward plus the discounted expected action-value of that pair's successor (state, action) pairs.
