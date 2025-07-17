@@ -40,3 +40,4 @@ For discussions of specific exercises, see their respective folders:
 |3|[3.17](./docs/ch03_ex03-17/README.md) | Bellman equation for action-values | Action-values are the expected {immediate reward plus discounted action-value of successor state/actions} | 
 |3|[3.18](./docs/ch03_ex03-18/README.md) | State-value in terms of action-value | State-value is the expected action-value |
 |3|[3.19](./docs/ch03_ex03-19/README.md) | Action-value in terms of state-value | Action-value is the expected immediate reward plus discounted next state value |
+|3|[3.20](./docs/ch03_ex03-20/README.md) | Optimal state-value function for golf | Optimal state-value function looks like optimal action-value function except where optimal actions are taken in each state |
