@@ -45,3 +45,4 @@ For discussions of specific exercises, see their respective folders:
 |3|[3.22](./docs/ch03_ex03-22/README.md) | Policy optimality under different discount factors | Discount factor can change which policy is optimal |
 |3|[3.23](./docs/ch03_ex03-23/README.md) | Optimal action-value equation for recycling robot | We can write a system of equations for optimal action-values in terms of environment dynamics and other optimal action-values |
 |3|[3.24](./docs/ch03_ex03-24/README.md) | Optimal state-value from the optimal policy | Knowing the optimal policy can reveal the sequence of future rewards from a given state, which determines the optimal state-value for that state |
+|3| [3.25](./docs/ch03_ex03-25/README.md) | Optimal state-value in terms of optimal action-value | A state's optimal value equals the max of the optimal action-values for the actions the agent can take there |
