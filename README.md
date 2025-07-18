@@ -44,3 +44,4 @@ For discussions of specific exercises, see their respective folders:
 |3|[3.21](./docs/ch03_ex03-21/README.md) | Optimal action-value function for putting | The optimal action value is the immediate reward plus the optimal state-value of the resulting state after putting |
 |3|[3.22](./docs/ch03_ex03-22/README.md) | Policy optimality under different discount factors | Discount factor can change which policy is optimal |
 |3|[3.23](./docs/ch03_ex03-23/README.md) | Optimal action-value equation for recycling robot | We can write a system of equations for optimal action-values in terms of environment dynamics and other optimal action-values |
+|3|[3.24](./docs/ch03_ex03-24/README.md) | Optimal state-value from the optimal policy | Knowing the optimal policy can reveal the sequence of future rewards from a given state, which determines the optimal state-value for that state |
