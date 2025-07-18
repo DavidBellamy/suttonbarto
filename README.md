@@ -49,3 +49,4 @@ For discussions of specific exercises, see their respective folders:
 |3|[3.26](./docs/ch03_ex03-26/README.md) | Optimal action-value in terms of optimal state-value and dynamics | Optimal action-value is the average of the immediate reward and the discounted optimal state-value over successor states, which are weighted by the transition dynamics |
 |3|[3.27](./docs/ch03_ex03-27/README.md) | Optimal policy in terms of optimal action-values | Optimal policy is greedy w.r.t. optimal action-values; it picks actions that yield maximal optimal action-value |
 |3|[3.28](./docs/ch03_ex03-28/README.md) | Optimal policy in terms of optimal state-values and dynamics | Optimal policy picks actions that yield maximal next-reward plus discounted (optimal) state-value |
+|3|[3.29](./docs/ch03_ex03-29/README.md) | Rewriting Bellman equations | In MDPs, one-step look-ahead is enough for optimal decision-making! |
