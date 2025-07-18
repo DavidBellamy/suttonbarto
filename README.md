@@ -41,3 +41,5 @@ For discussions of specific exercises, see their respective folders:
 |3|[3.18](./docs/ch03_ex03-18/README.md) | State-value in terms of action-value | State-value is the expected action-value |
 |3|[3.19](./docs/ch03_ex03-19/README.md) | Action-value in terms of state-value | Action-value is the expected immediate reward plus discounted next state value |
 |3|[3.20](./docs/ch03_ex03-20/README.md) | Optimal state-value function for golf | Optimal state-value function looks like optimal action-value function except where optimal actions are taken in each state |
+|3|[3.21](./docs/ch03_ex03-21/README.md) | Optimal action-value function for putting | The optimal action value is the immediate reward plus the optimal state-value of the resulting state after putting |
+|3|[3.22](./docs/ch03_ex03-22/README.md) | Policy optimality under different discount factors | Discount factor can change which policy is optimal |
