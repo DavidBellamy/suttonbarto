@@ -10,7 +10,7 @@ pip install -r requirements.txt
 
 # Exercise Discussions
 
-For discussions of specific exercises, see their respective folders:
+For discussions of specific exercises, see their respective folders. Note that I will add solutions to exercises pre-2.5 soon!
 
 | Chapter | Exercise | Topic | Notes |
 |---------|----------|-------|-------|
