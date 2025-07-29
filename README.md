@@ -51,3 +51,4 @@ For discussions of specific exercises, see their respective folders. Note that I
 |3|[3.28](./docs/ch03_ex03-28/README.md) | Optimal policy in terms of optimal state-values and dynamics | Optimal policy picks actions that yield maximal next-reward plus discounted (optimal) state-value |
 |3|[3.29](./docs/ch03_ex03-29/README.md) | Rewriting Bellman equations | In MDPs, one-step look-ahead is enough for optimal decision-making! |
 |4|[4.1](./docs/ch04_ex04-01/README.md) | Action-values of a Random Policy in Gridworld | Action-values are computed easily when state-values are given |
+|4|[4.2](./docs/ch04_ex04-02/README.md) | Changing one transition in the dynamics | Usually altering any transition changes all state-values. But not if the alteration swaps state-values that are exactly equal! |
